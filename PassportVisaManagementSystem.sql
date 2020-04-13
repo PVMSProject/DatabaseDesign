@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [PassportVisaManagementSystem]    Script Date: 13-04-2020 1.08.50 PM ******/
+/****** Object:  Database [PassportVisaManagementSystem]    Script Date: 13-04-2020 3.02.06 PM ******/
 CREATE DATABASE [PassportVisaManagementSystem]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -77,7 +77,7 @@ ALTER DATABASE [PassportVisaManagementSystem] SET QUERY_STORE = OFF
 GO
 USE [PassportVisaManagementSystem]
 GO
-/****** Object:  Table [dbo].[City]    Script Date: 13-04-2020 1.08.50 PM ******/
+/****** Object:  Table [dbo].[City]    Script Date: 13-04-2020 3.02.06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -87,7 +87,7 @@ CREATE TABLE [dbo].[City](
 	[CITY_NAME] [nvarchar](20) NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[OldPassportData]    Script Date: 13-04-2020 1.08.50 PM ******/
+/****** Object:  Table [dbo].[OldPassportData]    Script Date: 13-04-2020 3.02.06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -111,7 +111,7 @@ CREATE TABLE [dbo].[OldPassportData](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PassportApplication]    Script Date: 13-04-2020 1.08.50 PM ******/
+/****** Object:  Table [dbo].[PassportApplication]    Script Date: 13-04-2020 3.02.06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -135,7 +135,7 @@ CREATE TABLE [dbo].[PassportApplication](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[State]    Script Date: 13-04-2020 1.08.50 PM ******/
+/****** Object:  Table [dbo].[State]    Script Date: 13-04-2020 3.02.06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -149,7 +149,7 @@ CREATE TABLE [dbo].[State](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[UserRegistration]    Script Date: 13-04-2020 1.08.50 PM ******/
+/****** Object:  Table [dbo].[UserRegistration]    Script Date: 13-04-2020 3.02.06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -175,7 +175,7 @@ CREATE TABLE [dbo].[UserRegistration](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[VisaApplication]    Script Date: 13-04-2020 1.08.50 PM ******/
+/****** Object:  Table [dbo].[VisaApplication]    Script Date: 13-04-2020 3.02.06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -230,17 +230,17 @@ INSERT [dbo].[State] ([STATE_ID], [STATE_NAME]) VALUES (N'S_K004', N'Kerala')
 INSERT [dbo].[State] ([STATE_ID], [STATE_NAME]) VALUES (N'S_O001', N'Orissa')
 INSERT [dbo].[State] ([STATE_ID], [STATE_NAME]) VALUES (N'S_W002', N'West Bengal')
 GO
-INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'PASS-0001', N'Vishal Reddy', N'Pachika', CAST(N'1997-12-04' AS Date), N'HNo.2-7-678,Excise Colony,Subedari', N'7386559954', N'pachikavishalreddy@gmail.com', N'B.Tech', N'Male', N'Passport', N'What is your Favourite Movie ?', N'Avengers', N'01apr#112', N'Adult')
-INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'PASS-0002', N'Vineeth Reddy', N'Pachika', CAST(N'2004-06-09' AS Date), N'HNo.2-7-678,Excise Colony,Subedari', N'7337092880', N'vineethreddypachika@gmail.com', N'S.S.C', N'Male', N'Passport', N'What is your Favourite Movie ?', N'Joker', N'01apr$465', N'Teen')
-INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'PASS-0003', N'Vishal Reddy', N'Pachika', CAST(N'1997-12-04' AS Date), N'HNo.2-7-678,Excise Colony,Subedari', N'7386559954', N'abc@gmail.com', N'B.Tech', N'Male', N'Passport', N'What is your Favourite Movie ?', N'Avengers', N'04apr@320', N'Adult')
-INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'PASS-0004', N'Satish', N'Pachika', CAST(N'1966-06-06' AS Date), N'HNo.2-7-678,Excise Colony,Subedari', N'9849500790', N'satishpachika@gmail.com', N'ITI', N'Male', N'Passport', N'What is your Mother''s name ?', N'Sujatha', N'04apr@140', N'Senior Citizen')
-INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'PASS-0005', N'Madhuri', N'Pachiika', CAST(N'1977-09-06' AS Date), N'HNo.2-7-678,Excise Colony,Subedari', N'9912322788', N'madhuripachika@gmail.com', N'S.S.C', N'Female', N'Passport', N'What is your Mother''s name ?', N'Thirumala', N'05apr$144', N'Adult')
-INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'PASS-0006', N'Vishal Reddy', N'Pachika', CAST(N'1997-12-04' AS Date), N'HNo.2-7-678,Excise Colony,Subedari', N'7386559954', N'zxcvbnm@gmail.com', N'B.Tech', N'Male', N'Passport', N'What is your Mother''s name ?', N'Madhuri', N'11apr#336', N'Adult')
-INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'VISA-0001', N'Vishal Reddy', N'Pachika', CAST(N'1997-12-04' AS Date), N'HNo.2-7-678,Excise Colony,Subedari', N'7386559954', N'pachikavishalreddy@gmail.com', N'B.Tech', N'Male', N'Visa', N'What is your Mother''s name ?', N'Madhuri', N'01apr#000', N'Adult')
-INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'VISA-0002', N'Vineeth Reddy', N'Pachika', CAST(N'2004-06-09' AS Date), N'HNo.2-7-678,Excise Colony,Subedari', N'773092880', N'vineethreddypachika@gmail.com', N'S.S.C', N'Male', N'Visa', N'What is your Mother''s name ?', N'Madhuri', N'01apr#210', N'Teen')
-INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'VISA-0003', N'Satish', N'Pachika', CAST(N'1966-06-06' AS Date), N'HNo.2-7-678,Excise Colony,Subedari', N'9849500790', N'satishpachika@gmail.com', N'ITI', N'Male', N'Visa', N'What is your Favourite Movie ?', N'Khaidi', N'04apr@720', N'Senior Citizen')
-INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'VISA-0004', N'Madhuri', N'Pachika', CAST(N'1977-09-06' AS Date), N'HNo.2-7-678,Excise Colony,Subedari', N'9912322788', N'madhuripachika@gmail.com', N'S.S.C', N'Female', N'Visa', N'What is your Mother''s name ?', N'Thirumala', N'05apr$915', N'Adult')
-INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'VISA-0005', N'Vishal Reddy', N'Pachika', CAST(N'1997-12-04' AS Date), N'HNo.2-7-678,Excise Colony,Subedari', N'7386559954', N'zxcvbnm@gmail.com', N'B.Tech', N'Male', N'Visa', N'What is your Mother''s name ?', N'Madhuri', N'11apr#495', N'Adult')
+INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'PASS-0001', N'Vishal Reddy', N'Pachika', CAST(N'1997-12-04' AS Date), N'Telangana', N'7539517412', N'vishal@gmail.com', N'B.Tech', N'Male', N'Passport', N'What is your Favourite Movie ?', N'Avengers', N'01apr#112', N'Adult')
+INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'PASS-0002', N'Vineeth Reddy', N'Pachika', CAST(N'2004-06-09' AS Date), N'Telangana', N'8521479632', N'vineeth@gmail.com', N'S.S.C', N'Male', N'Passport', N'What is your Favourite Movie ?', N'Joker', N'01apr$465', N'Teen')
+INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'PASS-0003', N'Vishal Reddy', N'Pachika', CAST(N'1997-12-04' AS Date), N'Telangana', N'7539517412', N'abc@gmail.com', N'B.Tech', N'Male', N'Passport', N'What is your Favourite Movie ?', N'Avengers', N'04apr@320', N'Adult')
+INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'PASS-0004', N'Satish', N'Pachika', CAST(N'1966-06-06' AS Date), N'Telangana', N'9999999999', N'satish@gmail.com', N'ITI', N'Male', N'Passport', N'What is your Mother''s name ?', N'Sujatha', N'04apr@140', N'Senior Citizen')
+INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'PASS-0005', N'Madhuri', N'Pachiika', CAST(N'1977-09-06' AS Date), N'Telangana', N'8888888888', N'madhuri@gmail.com', N'S.S.C', N'Female', N'Passport', N'What is your Mother''s name ?', N'Thirumala', N'05apr$144', N'Adult')
+INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'PASS-0006', N'Vishal Reddy', N'Pachika', CAST(N'1997-12-04' AS Date), N'Telangana', N'7539517412', N'zxcvbnm@gmail.com', N'B.Tech', N'Male', N'Passport', N'What is your Mother''s name ?', N'Madhuri', N'11apr#336', N'Adult')
+INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'VISA-0001', N'Vishal Reddy', N'Pachika', CAST(N'1997-12-04' AS Date), N'Telangana', N'7539517412', N'vishal@gmail.com', N'B.Tech', N'Male', N'Visa', N'What is your Mother''s name ?', N'Madhuri', N'01apr#000', N'Adult')
+INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'VISA-0002', N'Vineeth Reddy', N'Pachika', CAST(N'2004-06-09' AS Date), N'Telangana', N'8521479632', N'vineeth@gmail.com', N'S.S.C', N'Male', N'Visa', N'What is your Mother''s name ?', N'Madhuri', N'01apr#210', N'Teen')
+INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'VISA-0003', N'Satish', N'Pachika', CAST(N'1966-06-06' AS Date), N'Telangana', N'9999999999', N'satish@gmail.com', N'ITI', N'Male', N'Visa', N'What is your Favourite Movie ?', N'Khaidi', N'04apr@720', N'Senior Citizen')
+INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'VISA-0004', N'Madhuri', N'Pachika', CAST(N'1977-09-06' AS Date), N'Telangana', N'8888888888', N'madhuri@gmail.com', N'S.S.C', N'Female', N'Visa', N'What is your Mother''s name ?', N'Thirumala', N'05apr$915', N'Adult')
+INSERT [dbo].[UserRegistration] ([UserID], [FirstName], [SurName], [DateOfBirth], [Address], [ContactNumber], [EmailAddress], [Qualification], [Gender], [ApplyType], [HintQuestion], [HintAnswer], [Password], [CitizenType]) VALUES (N'VISA-0005', N'Vishal Reddy', N'Pachika', CAST(N'1997-12-04' AS Date), N'Telangana', N'7539517412', N'zxcvbnm@gmail.com', N'B.Tech', N'Male', N'Visa', N'What is your Mother''s name ?', N'Madhuri', N'11apr#495', N'Adult')
 GO
 INSERT [dbo].[VisaApplication] ([VisaID], [UserID], [PassportNumber], [Country], [Occupation], [DateOfApplication], [DateOfIssue], [DateOfExpiry], [RegistrationCost], [CancellationCharges], [Status]) VALUES (N'PE-0001', N'VISA-0001', N'FPS-600004', N'Japan', N'Private Employee', CAST(N'2020-04-01' AS Date), CAST(N'2020-04-11' AS Date), CAST(N'2023-04-11' AS Date), 4000, 0, N'Approved')
 INSERT [dbo].[VisaApplication] ([VisaID], [UserID], [PassportNumber], [Country], [Occupation], [DateOfApplication], [DateOfIssue], [DateOfExpiry], [RegistrationCost], [CancellationCharges], [Status]) VALUES (N'PE-0002', N'VISA-0003', N'FPS-300008', N'USA', N'Private Employee', CAST(N'2020-04-04' AS Date), CAST(N'2020-04-14' AS Date), CAST(N'2023-04-14' AS Date), 4500, 900, N'Cancelled')
@@ -277,7 +277,7 @@ ALTER TABLE [dbo].[UserRegistration]  WITH CHECK ADD  CONSTRAINT [CK_ApplyType] 
 GO
 ALTER TABLE [dbo].[UserRegistration] CHECK CONSTRAINT [CK_ApplyType]
 GO
-/****** Object:  Trigger [dbo].[TRG_OLDPASSPORT]    Script Date: 13-04-2020 1.08.50 PM ******/
+/****** Object:  Trigger [dbo].[TRG_OLDPASSPORT]    Script Date: 13-04-2020 3.02.07 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
